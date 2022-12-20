@@ -1,0 +1,50 @@
+body{
+	background-image: url("styles\wIMAGE.jpg");
+}
+#form{
+	font-size: 10px;
+	font-family: 'Mochiy Pop P One', sans-serif;
+	background-image: url("styles\testen.png");
+	color: #3f4bec;
+	width: 100vw;
+	height: 8vh;
+	font-weight: 500;
+	padding: 10px;
+	box-sizing:  border-box;
+	text-align:  right;
+	margin:  20px 20px;
+	border-radius: 10px;
+	border:  10px outset; 
+	box-shadow:  0px 0px 10px #000;
+	/* Merkmale dieses abschnitts*/
+}
+#form .form__btn1{
+	background-color: #090E5A;
+	color:aliceblue;
+	padding: 15px 15px;
+}
+#form .form__btn2{
+	background-color: #3f4bec;
+	color:aliceblue;
+	padding: 15px 15px;
+}
+
+.form_input{
+	display: inline;
+}
+.form_lbl1 {
+	color:  #FFFF;
+	/* Clase */
+}
+.form_lbl2{
+	color:  #FFFF;
+}
+h2 p{
+	color:  #090E5A;
+	/*Andere XD */ 
+}
+
+h1:hover{
+	color:  #090E5A;
+	/* Benutze dieses Pseudo clase */ 
+}

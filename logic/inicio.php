@@ -12,7 +12,7 @@
    $filas=mysqli_num_rows($resultado);
 
    if($filas){
-    header("location: ../test.php");
+    header("location: ../usuarios.php");
    }else{
     echo "NO VÁLIDO";
    }
