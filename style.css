@@ -1,64 +1,44 @@
 body{
-	background-image: url("img\wIMAGE.jpg");
-}
-.form{
-	font-size: 10px;
-	font-family: 'Mochiy Pop P One', sans-serif;
-	background-image: url("img\testen.png");
-	width: 100vw;
-	height: 8vh;
-	font-weight: 500;
-	padding: 10px;
-	box-sizing:  border-box;
-	text-align:  right;
-	margin:  20px 20px;
-	border-radius: 10px;
-	border:  10px outset; 
-	box-shadow:  0px 0px 10px #000;
-	/* Merkmale dieses abschnitts*/
-}
-.form__btn1{
-	background-color: #090E5A;
-	color:aliceblue;
-	padding: 15px 15px;
-}
-.form__btn2{
-	background-color: #3f4bec;
-	color:aliceblue;
-	padding: 15px 15px;
-}
-.login-frm{
-	font-size: 10px;
-	font-family: 'Mochiy Pop P One', sans-serif;
-	align-items: center;
-	background-image: url("img\background.jpg");
-	width: 100vw;
-	height: 8vh;
-	font-weight: 500;
-	padding: 10px;
-	box-sizing:  border-box;
-	text-align:  right;
-	margin:  20px 20px;
-	border-radius: 10px;
-	border:  10px outset; 
-	box-shadow:  0px 0px 10px #000;
-}
-.form_input{
-	display: inline;
-}
-.form_lbl1 {
-	color:  #FFFF;
-	/* Clase */
-}
-.form_lbl2{
-	color:  #FFFF;
-}
-h2 p{
-	color:  #090E5A;
-	/*Andere XD */ 
+    background-image: url("w.jpg");
+    background-color: rgb(54, 51, 51);
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+    color: aliceblue;
 }
 
-h1:hover{
-	color:  #090E5A;
-	/* Benutze dieses Pseudo clase */ 
+.log-form{
+    background-image: url("testen.png");
+    text-align: right;
+    font-family: sans-serif;   
+    color: #57fa57;
+    width: 98vw;
+    height: 8vh;
+    padding: 5px;
+    font-weight: 500;
+    margin: 10px 10px;
+    border-radius: 5px;
+    border: 5px outset;
+    box-shadow: 0px 0px 5px #000;
+    box-sizing: border-box;
+    
+}
+
+
+.log-btn1{
+    border-radius: 10px;
+    background-color: aliceblue;
+    vertical-align: middle;
+    color: #3f4feb;
+    padding: 3px 3px;
+}
+.content{
+    background-image: url("background.jpg");
+    color: #3f4feb;
+    text-align: center;
+    border-radius: 5px;
+    border: 5px outset;
+    box-shadow: 0px 0px 5px #000;
+    box-sizing: border-box;
+
 }

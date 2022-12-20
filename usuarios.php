@@ -9,7 +9,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Forum Projekt</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="styles\formularios.css">
 </head>
 <body>
     <?php
@@ -17,7 +16,7 @@
         $usuario = $_SESSION['usuario'];
     ?>
 	<h1>Forum Projekt</h1>
-	<div class="form">
+	<div class="log-form" name="log-form">
         <?php
         echo "<b4>Willkommen '$usuario'</b4>"  
         ?>
