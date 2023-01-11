@@ -11,7 +11,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Forum Projekt</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo SERVERURL; ?>style.css">
 </head>
 <body>
     <?php
@@ -24,7 +24,7 @@
         echo "<b4>Willkommen '$usuario'</b4>"  
         ?>
 	</div>
-    <form class="login-frm" name="login-frm" action="logic/inicio.php" method="POST">
+    <form class="content" name="content" action="" method="POST">
 		
 </form>
 

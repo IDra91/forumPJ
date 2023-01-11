@@ -1,3 +1,8 @@
+<?php 
+    include "config/config.php";
+		session_start();
+        $usuario = $_SESSION['usuario'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,14 +13,35 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Forum Projekt</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo SERVERURL; ?>css/style.css">
 </head>
 <body>
 	<h1>Forum Projekt</h1>
-	<div class="log-form" name="log-form">
-    	<a class="log-btn1" href="login.php">Iniciar Sesión</a>
-		<a class="log-btn1" href="register.php">Registrarse</a>
+	<nav class="navbar-default" name="navbar-default">
+		<div class="container-fluid" name="container-fluid">
+			<div class="navbar-header" name="navbar-header">
+				<a class="navbar-btn2" href="inicio/">Inicio</a>
+				<a class="navbar-btn1" href="login/">Iniciar Sesión</a>
+				<a class="navbar-btn1" href="register/">Registrarse</a>
+			</div>	
+		</div>	
+</nav>
+	<div class="contenido" id="contenido">
+	<?php
+		//Va configurando las URLS de manera dinámica con la variable view y colocándolo en base a ello en el main
+    		if(isset($_GET['view'])){
+        		$views=explode("/",$_GET['view']);
+				if(is_file('views/'.$views[0].'-view.php')){
+					include 'views/'.$views[0].'-view.php';
+				}else{
+					include 'views/inicio-view.php';
+				}        		
+    		} else{
+        		include 'views/inicio-view.php';
+    		}
+
+	?>
 	</div>
-	
+
 </body>
 </html>
