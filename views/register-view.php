@@ -1,4 +1,4 @@
-<form class="content" name="content" action="logic/rgstr.php" method="POST">
+<form class="content" name="content" action="<?php echo SERVERURL; ?>logic/rgstr.php" method="POST">
 		<b4 class="login__lbl1">Usuario:</b4>
 		<input type="text" class="usuario" name="usuario">		
 		<p4 class="login__lbl2">Contraseña:</p4>

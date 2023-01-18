@@ -19,13 +19,17 @@
 	<h1>Forum Projekt</h1>
 	<nav class="navbar-default" name="navbar-default">
 		<div class="container-fluid" name="container-fluid">
-			<div class="navbar-header" name="navbar-header">
-				<a class="navbar-btn2" href="<?php echo SERVERURL; ?>inicio/">Inicio</a>
-				<a class="navbar-btn1" href="<?php echo SERVERURL; ?>login/">Iniciar Sesión</a>
-				<a class="navbar-btn1" href="<?php echo SERVERURL; ?>register/">Registrarse</a>
-			</div>	
+			<?php 
+				if($usuario != ""){
+					include "views/header-log-view.php";
+					/*echo $usuario;	*/
+			?> <a class="nav-link-profile" id="nav-link-profile" href="<?php echo SERVERURL; ?>profile/"><?php echo $usuario?></a> 
+				<?php			  } else{
+					include "views/header-unlog-view.php";
+				}
+			?>
 		</div>	
-</nav>
+	</nav>
 	<div class="contenido" id="contenido">
 	<?php
 		//Va configurando las URLS de manera dinámica con la variable view y colocándolo en base a ello en el main
@@ -38,8 +42,12 @@
 				}        		
     		} else{
         		include 'views/inicio-view.php';
-    		}
-
+    		} 
+				if($usuario != ""){
+					include "views/session-view.php";
+				}else{
+					include "views/inicio-view.php";
+				}
 	?>
 	</div>
 

@@ -1,5 +1,6 @@
 <?php 
-    require 'conexion.php';
+     require 'conexion.php';
+     require '../config/config.php';
     $rol = 4;
     $usuario=$_POST['usuario'];
     $password=$_POST['password'];
