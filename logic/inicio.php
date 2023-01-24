@@ -1,5 +1,6 @@
 <?php
     require 'conexion.php';
+    require '../config/config.php';
    $usuario=$_POST['usuario'];
    $password=$_POST['password'];
 
@@ -11,9 +12,9 @@
 
    $filas=mysqli_num_rows($resultado);
 
-   if($filas){
-    header("location: ../test.php");
-   }else{
+   if ($filas) {
+    header("location: ../index.php");
+   } else {
     echo "NO VÁLIDO";
    }
 ?>
