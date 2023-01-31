@@ -25,7 +25,9 @@
 			?> <a class="nav-link-profile" id="nav-link-profile" href="<?php echo SERVERPROF.$usuario; ?>"><?php echo $usuario?></a>
 				&nbsp;
 				<a class="nav-index" id="nav-index" href="<?php echo SERVERURL; ?>">Inicio</a>
-				<?php	  } else {
+				&nbsp;
+				<a class="nav-link-profile" id="nav-link-profile" href="<?php echo SERVERURL; ?>chat/">Chat</a>
+				<?php  } else {
 					include "views/header-unlog-view.php";
 					?><a class="nav-index" id="nav-index" href="<?php echo SERVERURL; ?>">Inicio</a><?php
 				}
