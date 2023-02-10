@@ -19,37 +19,32 @@
 	<h1>Forum Projekt</h1>
 	<nav class="navbar-default" name="navbar-default">
 		<div class="container-fluid" name="container-fluid">
-			<?php 
-				if($usuario != ""){
+			<?php
+				if ($usuario != "") {
 					include "views/header-log-view.php";
-					/*echo $usuario;	*/
-			?> <a class="nav-link-profile" id="nav-link-profile" href="<?php echo SERVERURL; ?>profile/"><?php echo $usuario?></a> 
-				<?php			  } else{
+			?> <a class="nav-link-profile" id="nav-link-profile" href="<?php echo SERVERPROF.$usuario; ?>"><?php echo $usuario?></a>
+				&nbsp;
+				<a class="nav-index" id="nav-index" href="<?php echo SERVERURL; ?>">Inicio</a>
+				&nbsp;
+				<a class="nav-link-profile" id="nav-link-profile" href="<?php echo SERVERURL; ?>chat/">Chat</a>
+				<?php  } else {
 					include "views/header-unlog-view.php";
+					?><a class="nav-index" id="nav-index" href="<?php echo SERVERURL; ?>">Inicio</a><?php
 				}
 			?>
-		</div>	
+		</div>
 	</nav>
 	<div class="contenido" id="contenido">
 	<?php
 		//Va configurando las URLS de manera dinámica con la variable view y colocándolo en base a ello en el main
-    		if(isset($_GET['view'])){
-        		$views=explode("/",$_GET['view']);
-				if(is_file('views/'.$views[0].'-view.php')){
-					include 'views/'.$views[0].'-view.php';
-				}else{
-					include 'views/inicio-view.php';
-				}        		
-    		} else{
-        		include 'views/inicio-view.php';
-    		} 
-				if($usuario != ""){
-					include "views/session-view.php";
-				}else{
-					include "views/inicio-view.php";
-				}
+    	include 'viewing-rule.php';
+		
 	?>
 	</div>
-
+	<div class="footer">
+		<adress>
+				IDra91<br>manuel.contactos91@protonmail.com
+			</adress>
+	</div>
 </body>
 </html>

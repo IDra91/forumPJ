@@ -12,9 +12,9 @@
 
    $filas=mysqli_num_rows($resultado);
 
-   if($filas){
+   if ($filas) {
     header("location: ../index.php");
-   }else{
+   } else {
     echo "NO VÁLIDO";
    }
 ?>

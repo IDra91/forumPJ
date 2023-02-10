@@ -1,2 +1,6 @@
+Options +FollowSymLinks
 RewriteEngine On
-RewriteRule ^([a-zA-Z0-9/]+)$ index.php?view=$1
+RewriteRule ^([a-zA-Z0-9/_%&()!¡#?¿$]+)$ index.php?view=$1
+RewriteRule ^([a-zA-Z0-9/_%&()!¡#?¿$]+)$ index.php?forum=$1
+RewriteRule ^([a-zA-Z0-9/_%&()!¡#?¿$]+)$ index.php?profile=$1
+RewriteRule ^([a-zA-Z0-9/_%&()!¡#?¿$]+)$ index.php?topic=$1

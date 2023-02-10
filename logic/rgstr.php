@@ -13,11 +13,11 @@
     $_SESSION['usuario']=$usuario;
     $answer = mysqli_query($con,$q);
     $anfrage = mysqli_query($con,$u);
-    if(mysqli_num_rows($answer)>0){
+    if (mysqli_num_rows($answer)>0) {
         //Se imprime el que ya existe el usuario
         echo "Ya existe este nombre de usuario, inténtelo de nuevo";
         header("location: ../register.php");
-    }else{
+    } else {
         //Se realiza el registro
         $anfrage;
         header("location: ../usuarios.php");

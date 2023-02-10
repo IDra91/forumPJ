@@ -1,0 +1,17 @@
+<?php
+    require 'conexion.php';
+    require '../config/config.php';
+    $no_tema = $_POST['no_tema'];
+    $no_usuario = $_POST['no_usuario'];
+    $mensaje = $_POST['mensaje'];
+    $q = "INSERT INTO comentarios (no_tema, no_usuario, mensaje) VALUES ($no_tema, $no_usuario, '$mensaje');";
+    $anfrage = mysqli_query($con, $q);
+    if ($anfrage) {
+        echo "Se ha publicado un comentario";
+        header("location: ../index.php");
+    } else {
+        echo "Se ha producido un error al comentar";
+        header("location: ../index.php");
+    }
+
+?>
