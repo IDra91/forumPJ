@@ -1,5 +1,5 @@
 <nav class="content" name="content">
     <?php
-        require 'logic/suche_profile.php';
+        echo "Hallo wir sind an topic-view";
     ?>
 </nav>

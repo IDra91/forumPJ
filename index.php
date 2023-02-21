@@ -37,22 +37,8 @@
 	<div class="contenido" id="contenido">
 	<?php
 		//Va configurando las URLS de manera dinámica con la variable view y colocándolo en base a ello en el main
-    		if (isset($_GET['view'])) {
-        		$views=explode("/",$_GET['view']);
-				if ((is_file('views/'.$views[0].'-view.php'))) {
-					
-					include 'views/'.$views[0].'-view.php';
-				} else {
-					include 'views/inicio-view.php';
-				}
-			} else {
-				include 'views/inicio-view.php';
-			}
-				if ($usuario != "") {
-					include "views/session-view.php";
-				} else {
-					include "views/inicio-view.php";
-				}
+    	include 'viewing-rule.php';
+		
 	?>
 	</div>
 	<div class="footer">
